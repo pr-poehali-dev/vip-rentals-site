@@ -102,14 +102,14 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-primary/30">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <Icon name="Crown" className="text-black" size={24} />
+            <div className="w-12 h-12 bg-gradient-to-br from-primary via-yellow-400 to-secondary rounded-lg flex items-center justify-center shadow-lg shadow-primary/50">
+              <Icon name="Crown" className="text-black drop-shadow-lg" size={28} />
             </div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Vip Прокат
+            <h1 className="text-3xl font-black bg-gradient-to-r from-primary via-yellow-300 to-secondary bg-clip-text text-transparent tracking-tight">
+              VIP ПРОКАТ
             </h1>
           </div>
           <nav className="hidden md:flex items-center gap-6">
@@ -132,9 +132,9 @@ export default function Index() {
               </button>
             ))}
           </nav>
-          <Button className="bg-primary hover:bg-primary/90 text-black font-semibold">
-            <Icon name="Phone" size={16} className="mr-2" />
-            Позвонить
+          <Button className="bg-gradient-to-r from-primary to-secondary hover:from-yellow-400 hover:to-primary text-black font-bold shadow-lg shadow-primary/50 transition-all hover:shadow-primary/70 hover:scale-105">
+            <Icon name="Phone" size={18} className="mr-2" />
+            ПОЗВОНИТЬ
           </Button>
         </div>
       </header>
@@ -143,65 +143,66 @@ export default function Index() {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <Badge className="mb-4 bg-primary/20 text-primary border-primary/50">
-                Премиум сервис аренды
+              <Badge className="mb-6 bg-gradient-to-r from-primary/30 to-secondary/30 text-primary border-2 border-primary/70 px-4 py-1.5 text-sm font-semibold tracking-wider shadow-lg shadow-primary/30">
+                ✦ ПРЕМИУМ СЕРВИС АРЕНДЫ ✦
               </Badge>
-              <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Роскошь в каждой <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">детали</span>
+              <h2 className="text-6xl md:text-7xl font-black mb-8 leading-none">
+                РОСКОШЬ <br/>В КАЖДОЙ <span className="bg-gradient-to-r from-primary via-yellow-300 to-secondary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(234,179,8,0.5)]">ДЕТАЛИ</span>
               </h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                95 автомобилей премиум-класса для вашего комфорта. От бизнес-седанов до суперкаров.
+              <p className="text-2xl text-foreground/80 mb-10 font-light leading-relaxed">
+                95 автомобилей премиум-класса для вашего комфорта.<br/>От бизнес-седанов до суперкаров.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-black font-semibold"
+                  className="bg-gradient-to-r from-primary to-secondary hover:from-yellow-400 hover:to-primary text-black font-bold text-lg px-8 py-6 shadow-2xl shadow-primary/50 transition-all hover:shadow-primary/70 hover:scale-105"
                   onClick={() => scrollToSection('catalog')}
                 >
-                  <Icon name="Car" size={20} className="mr-2" />
-                  Выбрать авто
+                  <Icon name="Car" size={24} className="mr-3" />
+                  ВЫБРАТЬ АВТО
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-primary text-primary hover:bg-primary/10"
+                  className="border-2 border-primary text-primary hover:bg-primary/20 font-bold text-lg px-8 py-6 transition-all hover:shadow-lg hover:shadow-primary/30 hover:scale-105"
                   onClick={() => scrollToSection('contacts')}
                 >
-                  Связаться с нами
+                  СВЯЗАТЬСЯ С НАМИ
                 </Button>
               </div>
-              <div className="grid grid-cols-3 gap-6 mt-12">
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-1">95</div>
-                  <div className="text-sm text-muted-foreground">Автомобилей</div>
+              <div className="grid grid-cols-3 gap-8 mt-16">
+                <div className="text-center">
+                  <div className="text-5xl font-black bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent mb-2 drop-shadow-[0_0_20px_rgba(234,179,8,0.5)]">95</div>
+                  <div className="text-sm text-foreground/70 uppercase tracking-wider font-semibold">Автомобилей</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-1">24/7</div>
-                  <div className="text-sm text-muted-foreground">Поддержка</div>
+                <div className="text-center">
+                  <div className="text-5xl font-black bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent mb-2 drop-shadow-[0_0_20px_rgba(234,179,8,0.5)]">24/7</div>
+                  <div className="text-sm text-foreground/70 uppercase tracking-wider font-semibold">Поддержка</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-1">5★</div>
-                  <div className="text-sm text-muted-foreground">Рейтинг</div>
+                <div className="text-center">
+                  <div className="text-5xl font-black bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent mb-2 drop-shadow-[0_0_20px_rgba(234,179,8,0.5)]">5★</div>
+                  <div className="text-sm text-foreground/70 uppercase tracking-wider font-semibold">Рейтинг</div>
                 </div>
               </div>
             </div>
             <div className="relative animate-scale-in">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-secondary/40 rounded-3xl blur-[100px] animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent rounded-3xl"></div>
               <img 
                 src="https://cdn.poehali.dev/projects/10a2141a-c10d-4531-8caf-da024826421e/files/c18a1a72-e0a0-4cc4-a6b1-914e712cf7f5.jpg"
                 alt="Luxury Car"
-                className="relative rounded-2xl shadow-2xl w-full object-cover"
+                className="relative rounded-3xl shadow-2xl shadow-primary/20 w-full object-cover border-2 border-primary/30"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section id="catalog" className="py-20 px-4 bg-card/50">
+      <section id="catalog" className="py-20 px-4 bg-gradient-to-b from-black via-primary/5 to-black">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Каталог автомобилей</h2>
-            <p className="text-muted-foreground text-lg">95 премиальных автомобилей к вашим услугам</p>
+          <div className="text-center mb-16">
+            <h2 className="text-6xl font-black mb-6 bg-gradient-to-r from-primary via-yellow-300 to-secondary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(234,179,8,0.5)]">КАТАЛОГ АВТОМОБИЛЕЙ</h2>
+            <p className="text-foreground/70 text-xl font-light">95 премиальных автомобилей к вашим услугам</p>
           </div>
 
           <div className="flex flex-col md:flex-row gap-4 mb-8">
@@ -233,7 +234,7 @@ export default function Index() {
             {filteredCars.map((car, index) => (
               <Card 
                 key={car.id} 
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-card border-border overflow-hidden"
+                className="group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-2 bg-card border-2 border-primary/20 hover:border-primary/60 overflow-hidden backdrop-blur-sm"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <div className="relative overflow-hidden">
@@ -242,9 +243,10 @@ export default function Index() {
                     alt={`${car.brand} ${car.model}`}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <Badge className="absolute top-3 right-3 bg-primary text-black font-semibold">
+                  <Badge className="absolute top-3 right-3 bg-gradient-to-r from-primary to-secondary text-black font-bold shadow-lg shadow-primary/50 border border-yellow-300/50">
                     {car.category}
                   </Badge>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 <CardHeader>
                   <CardTitle className="flex items-center justify-between">
@@ -268,10 +270,10 @@ export default function Index() {
                   </div>
                   <div className="flex items-center justify-between pt-4 border-t border-border">
                     <div>
-                      <div className="text-2xl font-bold text-primary">
+                      <div className="text-3xl font-black bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                         {car.price.toLocaleString('ru-RU')} ₽
                       </div>
-                      <div className="text-xs text-muted-foreground">за сутки</div>
+                      <div className="text-xs text-foreground/60 uppercase tracking-wider">за сутки</div>
                     </div>
                     <div className="text-right">
                       <div className="text-sm font-medium">Залог</div>
@@ -285,10 +287,10 @@ export default function Index() {
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button 
-                        className="w-full bg-primary hover:bg-primary/90 text-black font-semibold"
+                        className="w-full bg-gradient-to-r from-primary to-secondary hover:from-yellow-400 hover:to-primary text-black font-bold shadow-lg shadow-primary/50 transition-all hover:shadow-primary/70 hover:scale-105"
                         onClick={() => setSelectedCar(car)}
                       >
-                        Забронировать
+                        ЗАБРОНИРОВАТЬ
                       </Button>
                     </DialogTrigger>
                     <DialogContent className="bg-card">
@@ -321,9 +323,9 @@ export default function Index() {
                             <span className="font-semibold">{selectedCar?.deposit.toLocaleString('ru-RU')} ₽</span>
                           </div>
                         </div>
-                        <Button className="w-full bg-primary hover:bg-primary/90 text-black font-semibold">
-                          <Icon name="Send" size={16} className="mr-2" />
-                          Отправить заявку
+                        <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:from-yellow-400 hover:to-primary text-black font-bold shadow-lg shadow-primary/50 transition-all hover:shadow-primary/70">
+                          <Icon name="Send" size={18} className="mr-2" />
+                          ОТПРАВИТЬ ЗАЯВКУ
                         </Button>
                       </div>
                     </DialogContent>
@@ -335,48 +337,49 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="about" className="py-20 px-4">
+      <section id="about" className="py-20 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 pointer-events-none"></div>
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">О компании</h2>
-              <p className="text-muted-foreground text-lg mb-6">
+              <h2 className="text-5xl font-black mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">О КОМПАНИИ</h2>
+              <p className="text-foreground/80 text-xl mb-6 font-light leading-relaxed">
                 Vip Прокат — это премиальный сервис аренды автомобилей класса люкс. 
                 Мы предлагаем эксклюзивный автопарк из 95 автомобилей ведущих мировых брендов.
               </p>
-              <p className="text-muted-foreground text-lg mb-8">
+              <p className="text-foreground/80 text-xl mb-10 font-light leading-relaxed">
                 Наша миссия — сделать роскошь доступной. Каждый автомобиль проходит тщательную проверку 
                 и подготовку перед выдачей клиенту.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 bg-card rounded-lg border border-border">
-                  <Icon name="Shield" className="text-primary mb-2" size={32} />
-                  <h3 className="font-semibold mb-1">Полная страховка</h3>
-                  <p className="text-sm text-muted-foreground">КАСКО на все автомобили</p>
+                <div className="p-6 bg-gradient-to-br from-card to-primary/10 rounded-xl border-2 border-primary/30 hover:border-primary/60 transition-all hover:shadow-lg hover:shadow-primary/30">
+                  <Icon name="Shield" className="text-primary mb-3 drop-shadow-[0_0_10px_rgba(234,179,8,0.5)]" size={40} />
+                  <h3 className="font-bold mb-2 text-lg">Полная страховка</h3>
+                  <p className="text-sm text-foreground/70">КАСКО на все автомобили</p>
                 </div>
-                <div className="p-4 bg-card rounded-lg border border-border">
-                  <Icon name="Clock" className="text-primary mb-2" size={32} />
-                  <h3 className="font-semibold mb-1">Круглосуточно</h3>
-                  <p className="text-sm text-muted-foreground">Поддержка 24/7</p>
+                <div className="p-6 bg-gradient-to-br from-card to-primary/10 rounded-xl border-2 border-primary/30 hover:border-primary/60 transition-all hover:shadow-lg hover:shadow-primary/30">
+                  <Icon name="Clock" className="text-primary mb-3 drop-shadow-[0_0_10px_rgba(234,179,8,0.5)]" size={40} />
+                  <h3 className="font-bold mb-2 text-lg">Круглосуточно</h3>
+                  <p className="text-sm text-foreground/70">Поддержка 24/7</p>
                 </div>
-                <div className="p-4 bg-card rounded-lg border border-border">
-                  <Icon name="MapPin" className="text-primary mb-2" size={32} />
-                  <h3 className="font-semibold mb-1">Доставка</h3>
-                  <p className="text-sm text-muted-foreground">В любую точку города</p>
+                <div className="p-6 bg-gradient-to-br from-card to-primary/10 rounded-xl border-2 border-primary/30 hover:border-primary/60 transition-all hover:shadow-lg hover:shadow-primary/30">
+                  <Icon name="MapPin" className="text-primary mb-3 drop-shadow-[0_0_10px_rgba(234,179,8,0.5)]" size={40} />
+                  <h3 className="font-bold mb-2 text-lg">Доставка</h3>
+                  <p className="text-sm text-foreground/70">В любую точку города</p>
                 </div>
-                <div className="p-4 bg-card rounded-lg border border-border">
-                  <Icon name="Star" className="text-primary mb-2" size={32} />
-                  <h3 className="font-semibold mb-1">VIP-сервис</h3>
-                  <p className="text-sm text-muted-foreground">Персональный менеджер</p>
+                <div className="p-6 bg-gradient-to-br from-card to-primary/10 rounded-xl border-2 border-primary/30 hover:border-primary/60 transition-all hover:shadow-lg hover:shadow-primary/30">
+                  <Icon name="Star" className="text-primary mb-3 drop-shadow-[0_0_10px_rgba(234,179,8,0.5)]" size={40} />
+                  <h3 className="font-bold mb-2 text-lg">VIP-сервис</h3>
+                  <p className="text-sm text-foreground/70">Персональный менеджер</p>
                 </div>
               </div>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-l from-primary/20 to-secondary/20 rounded-2xl blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-l from-primary/40 to-secondary/40 rounded-3xl blur-[100px] animate-pulse"></div>
               <img 
                 src="https://cdn.poehali.dev/projects/10a2141a-c10d-4531-8caf-da024826421e/files/d126c915-d74a-4911-87af-3c03651c626c.jpg"
                 alt="Luxury SUV"
-                className="relative rounded-2xl shadow-2xl w-full object-cover"
+                className="relative rounded-3xl shadow-2xl shadow-primary/20 w-full object-cover border-2 border-primary/30"
               />
             </div>
           </div>
@@ -440,52 +443,52 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="offers" className="py-20 px-4">
+      <section id="offers" className="py-20 px-4 bg-gradient-to-b from-black via-primary/5 to-black">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Акции и спецпредложения</h2>
+          <h2 className="text-6xl font-black mb-16 text-center bg-gradient-to-r from-primary via-yellow-300 to-secondary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(234,179,8,0.5)]">АКЦИИ И СПЕЦПРЕДЛОЖЕНИЯ</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="bg-gradient-to-br from-primary/20 to-secondary/20 border-primary/50">
+            <Card className="bg-gradient-to-br from-primary/30 to-secondary/30 border-2 border-primary/60 hover:border-primary transition-all hover:shadow-2xl hover:shadow-primary/50 hover:-translate-y-2">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
-                  <Icon name="Percent" className="text-black" size={24} />
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/50">
+                  <Icon name="Percent" className="text-black" size={32} />
                 </div>
-                <CardTitle>Первая аренда -15%</CardTitle>
+                <CardTitle className="text-2xl font-black">Первая аренда -15%</CardTitle>
               </CardHeader>
-              <CardContent className="text-muted-foreground">
-                Скидка 15% на первую аренду для новых клиентов. Промокод: FIRST15
+              <CardContent className="text-foreground/70 text-lg">
+                Скидка 15% на первую аренду для новых клиентов. Промокод: <span className="font-bold text-primary">FIRST15</span>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-primary/20 to-secondary/20 border-primary/50">
+            <Card className="bg-gradient-to-br from-primary/30 to-secondary/30 border-2 border-primary/60 hover:border-primary transition-all hover:shadow-2xl hover:shadow-primary/50 hover:-translate-y-2">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
-                  <Icon name="Calendar" className="text-black" size={24} />
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/50">
+                  <Icon name="Calendar" className="text-black" size={32} />
                 </div>
-                <CardTitle>Длительная аренда</CardTitle>
+                <CardTitle className="text-2xl font-black">Длительная аренда</CardTitle>
               </CardHeader>
-              <CardContent className="text-muted-foreground">
-                От 30 дней — скидка 10%, от 90 дней — скидка 20% на любой автомобиль
+              <CardContent className="text-foreground/70 text-lg">
+                От 30 дней — скидка <span className="font-bold text-primary">10%</span>, от 90 дней — скидка <span className="font-bold text-primary">20%</span> на любой автомобиль
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-primary/20 to-secondary/20 border-primary/50">
+            <Card className="bg-gradient-to-br from-primary/30 to-secondary/30 border-2 border-primary/60 hover:border-primary transition-all hover:shadow-2xl hover:shadow-primary/50 hover:-translate-y-2">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
-                  <Icon name="Gift" className="text-black" size={24} />
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/50">
+                  <Icon name="Gift" className="text-black" size={32} />
                 </div>
-                <CardTitle>Программа лояльности</CardTitle>
+                <CardTitle className="text-2xl font-black">Программа лояльности</CardTitle>
               </CardHeader>
-              <CardContent className="text-muted-foreground">
-                Накопительные бонусы за каждую аренду. 1 бонус = 1 рубль скидки
+              <CardContent className="text-foreground/70 text-lg">
+                Накопительные бонусы за каждую аренду. <span className="font-bold text-primary">1 бонус = 1 рубль</span> скидки
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-4 bg-card/50">
+      <section id="contacts" className="py-20 px-4 bg-gradient-to-b from-black via-primary/5 to-black">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold mb-12 text-center">Контакты</h2>
+          <h2 className="text-6xl font-black mb-16 text-center bg-gradient-to-r from-primary via-yellow-300 to-secondary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(234,179,8,0.5)]">КОНТАКТЫ</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="bg-card border-border">
               <CardHeader>
@@ -547,9 +550,9 @@ export default function Index() {
                     <Label htmlFor="contact-message">Сообщение</Label>
                     <Input id="contact-message" placeholder="Ваш вопрос" className="bg-background" />
                   </div>
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-black font-semibold">
-                    <Icon name="Send" size={16} className="mr-2" />
-                    Отправить
+                  <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:from-yellow-400 hover:to-primary text-black font-bold shadow-lg shadow-primary/50 transition-all hover:shadow-primary/70">
+                    <Icon name="Send" size={18} className="mr-2" />
+                    ОТПРАВИТЬ
                   </Button>
                 </form>
               </CardContent>
