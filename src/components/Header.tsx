@@ -71,16 +71,16 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 md:hidden">
           <div 
-            className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/80 backdrop-blur-sm animate-fade-in"
             onClick={() => setIsMobileMenuOpen(false)}
           />
-          <nav className="absolute top-[73px] left-0 right-0 bg-card/95 backdrop-blur-md border-b-2 border-primary/30 shadow-2xl shadow-primary/20">
+          <nav className="absolute top-[73px] left-0 right-0 bg-card/95 backdrop-blur-md border-b-2 border-primary/30 shadow-2xl shadow-primary/20 animate-slide-down">
             <div className="container mx-auto px-4 py-6 space-y-2">
               {navItems.map((item, index) => (
                 <button
                   key={item.id}
                   onClick={() => handleNavigate(item.id)}
-                  className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all hover:bg-primary/20 ${
+                  className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all hover:bg-primary/20 animate-slide-in ${
                     activeSection === item.id 
                       ? 'bg-primary/20 text-primary border-l-4 border-primary' 
                       : 'text-foreground/80'
@@ -90,7 +90,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
                   {item.label}
                 </button>
               ))}
-              <div className="pt-4">
+              <div className="pt-4 animate-slide-in" style={{ animationDelay: '0.3s' }}>
                 <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:from-yellow-400 hover:to-primary text-black font-bold shadow-lg shadow-primary/50">
                   <Icon name="Phone" size={18} className="mr-2" />
                   ПОЗВОНИТЬ
